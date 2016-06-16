@@ -2,6 +2,7 @@
 #define CHARACTER_H
 #include "Gameobject.h"
 #include "Hotbar.h"
+#include "Item.h"
 
 class Character : public Gameobject
 {
@@ -12,6 +13,7 @@ class Character : public Gameobject
         int velY;
 
         Hotbar hotbar;
+        Item activeitem;
 
         float angle;
 

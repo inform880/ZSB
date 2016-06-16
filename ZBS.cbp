@@ -32,9 +32,11 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-g" />
 			<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/include" />
 		</Compiler>
 		<Linker>
+			<Add option="-lmingw32 -lSDL2main -lSDL2" />
 			<Add library="mingw32" />
 			<Add library="SDL2main" />
 			<Add library="SDL2.dll" />
@@ -45,12 +47,14 @@
 			<Add directory="C:/Program Files (x86)/CodeBlocks/MinGW/lib" />
 		</Linker>
 		<Unit filename="include/Character.h" />
+		<Unit filename="include/Environment.h" />
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/Gameobject.h" />
 		<Unit filename="include/Hotbar.h" />
 		<Unit filename="include/Item.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Character.cpp" />
+		<Unit filename="src/Environment.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/Gameobject.cpp" />
 		<Unit filename="src/Hotbar.cpp" />

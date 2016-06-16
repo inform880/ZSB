@@ -367,3 +367,119 @@
 1466032350 source:d:\zsb\src\item.cpp
 	"Item.h"
 
+1466097023 source:c:\users\william\documents\zsb\main.cpp
+	<iostream>
+	<SDL2/SDL.h>
+	"Game.h"
+
+1466111671 c:\users\william\documents\zsb\include\game.h
+	"Game.h"
+	"Gameobject.h"
+	"Character.h"
+	"Environment.h"
+	<SDL2/SDL.h>
+	<SDL2/SDL_timer.h>
+
+1466101332 c:\users\william\documents\zsb\include\gameobject.h
+	<SDL2/SDL.h>
+	<iostream>
+
+1466095978 c:\users\william\documents\zsb\include\character.h
+	"Gameobject.h"
+	"Hotbar.h"
+	"Item.h"
+
+1466104912 c:\users\william\documents\zsb\include\hotbar.h
+	"Item.h"
+	"Gameobject.h"
+
+1466104098 c:\users\william\documents\zsb\include\item.h
+	<iostream>
+	"Gameobject.h"
+
+1466104678 source:c:\users\william\documents\zsb\src\character.cpp
+	"Character.h"
+	"Hotbar.h"
+	<SDL2/SDL.h>
+	<cmath>
+
+1466111741 source:c:\users\william\documents\zsb\src\game.cpp
+	<Game.h>
+	<SDL2/SDL.h>
+	<iostream>
+	<cmath>
+
+1466094554 source:c:\users\william\documents\zsb\src\gameobject.cpp
+	"Gameobject.h"
+
+1466112946 source:c:\users\william\documents\zsb\src\hotbar.cpp
+	"Hotbar.h"
+	"Item.h"
+
+1466111843 source:c:\users\william\documents\zsb\src\item.cpp
+	"Item.h"
+
+1341010380 c:\program files (x86)\codeblocks\mingw\include\sys\types.h
+	<_mingw.h>
+	<stddef.h>
+
+1341010370 c:\program files (x86)\codeblocks\mingw\include\_mingw.h
+
+1341010376 c:\program files (x86)\codeblocks\mingw\include\stdio.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<sys/types.h>
+
+1341010376 c:\program files (x86)\codeblocks\mingw\include\stdlib.h
+	<_mingw.h>
+	<stddef.h>
+
+1341010374 c:\program files (x86)\codeblocks\mingw\include\malloc.h
+	<_mingw.h>
+	<stdlib.h>
+
+1341010374 c:\program files (x86)\codeblocks\mingw\include\memory.h
+	<string.h>
+
+1341010376 c:\program files (x86)\codeblocks\mingw\include\string.h
+	<_mingw.h>
+	<stddef.h>
+
+1341010376 c:\program files (x86)\codeblocks\mingw\include\strings.h
+	<string.h>
+
+1341010372 c:\program files (x86)\codeblocks\mingw\include\inttypes.h
+	<_mingw.h>
+	<stdint.h>
+	<stddef.h>
+
+1341010376 c:\program files (x86)\codeblocks\mingw\include\stdint.h
+	<stddef.h>
+
+1341010370 c:\program files (x86)\codeblocks\mingw\include\ctype.h
+	<_mingw.h>
+	<stddef.h>
+
+1341010374 c:\program files (x86)\codeblocks\mingw\include\math.h
+	<_mingw.h>
+
+1341010372 c:\program files (x86)\codeblocks\mingw\include\float.h
+	<_mingw.h>
+
+1341010376 c:\program files (x86)\codeblocks\mingw\include\signal.h
+	<_mingw.h>
+
+1341010374 c:\program files (x86)\codeblocks\mingw\include\process.h
+	<_mingw.h>
+	<sys/types.h>
+	<stdint.h>
+
+1466111413 source:c:\users\william\documents\zsb\src\environment.cpp
+	"Environment.h"
+
+1466107262 c:\users\william\documents\zsb\include\environment.h
+	"Item.h"
+	"math.h"
+	"Character.h"
+

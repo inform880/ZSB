@@ -3,6 +3,8 @@
 #include "Game.h"
 #include "Gameobject.h"
 #include "Character.h"
+#include "Environment.h"
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_timer.h>
 
@@ -27,6 +29,9 @@ class Game
         SDL_Surface* screensurface;
 
         Character player;
+        Item testitem;
+        Item testitem2;
+        Environment environment;
 };
 
 #endif // GAME_H

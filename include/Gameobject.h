@@ -17,6 +17,9 @@ class Gameobject
 
         bool isVisible;
 
+        int x;
+        int y;
+
     protected:
 
     private:

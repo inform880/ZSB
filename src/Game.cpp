@@ -57,6 +57,17 @@ bool Game::Loop()
     SDL_RenderClear(renderer);
     SDL_RenderCopyEx(renderer, player.objImage, NULL, &player.rect, player.angle, NULL, SDL_FLIP_NONE);
     SDL_RenderCopy(renderer, player.hotbar.objImage, NULL, &player.hotbar.rect);
+    SDL_RenderCopy(renderer, player.hotbar.selectedimage, NULL, &player.hotbar.selectedimagerect);
+    for(int i = 0; i < 4; i++)
+    {
+        if(player.hotbar.slot[i].identifier != -1)
+            SDL_RenderCopy(renderer, player.hotbar.slot[i].objImage, NULL, &player.hotbar.slot[i].rect);
+    }
+    for(int i = 0; i < 100 ; i++)
+    {
+        if(environment.groundItems[i].identifier != -1)
+            SDL_RenderCopy(renderer,environment.groundItems[i].objImage,NULL, &environment.groundItems[i].rect);
+    }
     SDL_RenderPresent(renderer);
 
         // message processing loop
@@ -108,16 +119,21 @@ bool Game::Loop()
 
                         break;
                 }
-                case SDL_MOUSEMOTION:
+                case SDL_MOUSEWHEEL:
                 {
-
+                    if(event.wheel.y > 0 && player.hotbar.itemSelected != 0 )
+                        player.hotbar.itemSelected--;
+                    if(event.wheel.y < 0 && player.hotbar.itemSelected != 4 )
+                        player.hotbar.itemSelected++;
+                    break;
                 }
             } // end switch
         } // end of message processing
 
         //Update Gameobjects
         player.updateCharacter();
-
+        environment.updateItems();
+        environment.checkCollision(player);
 
         //Update Framerate
         if( time < SCREEN_TICKS_PER_FRAME )
@@ -140,8 +156,27 @@ bool Game::Exit()
 
 bool Game::CreateObjects()
 {
+    testitem.objImage = testitem.loadSurface("testitem.bmp", screensurface, renderer);
+    testitem.identifier = 101;
+    testitem.type = WEAPON;
+    testitem.status = GROUND;
+    testitem.x = 500;
+    testitem.y = 500;
+
+    testitem2.objImage = testitem2.loadSurface("testitem.bmp", screensurface, renderer);
+    testitem2.identifier = 101;
+    testitem2.type = WEAPON;
+    testitem2.status = GROUND;
+    testitem2.x = 500;
+    testitem2.y = 500;
+
+    environment.insertitem(testitem, 500, 500);
+
+    player.hotbar.insertitem(testitem2, 1);
+
     player.objImage = player.loadSurface("test.bmp", screensurface, renderer);
-    player.hotbar.loadSurface("hotbar.bmp", screensurface, renderer);
+    player.hotbar.objImage = player.hotbar.loadSurface("hotbar.bmp", screensurface, renderer);
+    player.hotbar.selectedimage = player.hotbar.loadSurface("hotbarselected.bmp", screensurface, renderer);
     return true;
 }
 

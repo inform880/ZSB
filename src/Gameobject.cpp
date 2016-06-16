@@ -24,7 +24,7 @@ SDL_Texture* Gameobject::loadSurface( std::string path, SDL_Surface* screensurfa
     }
     else
     {
-        optimizedSurface = SDL_ConvertSurface( loadedSurface, screensurface->format, NULL);
+        optimizedSurface = SDL_ConvertSurface( loadedSurface, screensurface->format, 0);
         if(optimizedSurface == NULL)
         {
             std::cout << "unable to optimize image!" << std::endl;

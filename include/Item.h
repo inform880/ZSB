@@ -3,18 +3,26 @@
 #include <iostream>
 #include "Gameobject.h"
 
-enum{WEAPON, FOOD, TOOL, MATERIAL};
+enum types {WEAPON, FOOD, TOOL, MATERIAL};
+enum status {INVENTORY, GROUND, HOTBAR};
 
 class Item : public Gameobject
 {
     public:
-        Item( int Sidentifier, int Stype, std::string Sname );
+        Item();
         virtual ~Item();
 
         int identifier;
         int type;
 
         std::string name;
+
+        int status;
+
+        bool createItem(Item item);
+
+        void updateItem(int hotbarlocation);
+        void updateItem();
 
     protected:
 

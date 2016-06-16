@@ -2,7 +2,6 @@
 #define HOTBAR_H
 #include "Item.h"
 #include "Gameobject.h"
-const int NUM_HOTBAR_ITEMS = 5;
 
 class Hotbar : public Gameobject
 {
@@ -11,16 +10,23 @@ class Hotbar : public Gameobject
         virtual ~Hotbar();
 
         //C++ is base 0 arrrggg
-        //Item slot[NUM_HOTBAR_ITEMS - 1];
-        Item slot[NUM_HOTBAR_ITEMS-1](int, int, std::string);
+        Item slot[4];
 
-        bool insertitem(Item item, int slot);
+        bool insertitem(Item item, int slotnum);
         bool insertitem(Item item);
 
-        bool removeitem(Item item, int slot);
+        bool removeitem( int slotnum );
+
+        void updateHotbar();
+
+        int itemSelected;
+
+        SDL_Texture* selectedimage;
+
+        SDL_Rect selectedimagerect;
 
     private:
-        int itemSelected;
+
 
 };
 
