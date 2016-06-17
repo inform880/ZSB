@@ -24,4 +24,27 @@ void Character::updateCharacter()
 
     x = rect.x + 100;
     y = rect.y + 100;
+
+    activeitem = hotbar.getactiveItem();
+}
+
+void Character::useItem()
+{
+    switch(activeitem.type)
+    {
+        case WEAPON:                    //WEAPONS are in the 100s
+            switch(activeitem.identifier)
+            {
+                case 101:
+                    break;
+            }
+            break;
+        case FOOD:                      //FOODs are 200s
+            break;
+        case TOOL:                      //TOOLs are 300s
+            break;
+        case MATERIAL:                  //MATERIALs are 400s
+            break;
+    }
+    return;
 }

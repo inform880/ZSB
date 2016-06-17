@@ -19,6 +19,8 @@ class Character : public Gameobject
 
         void updateCharacter();
 
+        void useItem();
+
     private:
 
 };

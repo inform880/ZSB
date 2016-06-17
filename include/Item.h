@@ -24,6 +24,11 @@ class Item : public Gameobject
         void updateItem(int hotbarlocation);
         void updateItem();
 
+        int delay;
+        int timer;
+
+        int numUses;
+
     protected:
 
     private:

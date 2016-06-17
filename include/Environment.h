@@ -18,7 +18,7 @@ class Environment
 
         void updateItems();
 
-        void checkCollision(Character character);
+        void checkCollision(Character *character);
 
     protected:
 

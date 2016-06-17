@@ -18,6 +18,7 @@ SDL_Texture* Gameobject::loadSurface( std::string path, SDL_Surface* screensurfa
     SDL_Surface* optimizedSurface = NULL;
 
     SDL_Surface* loadedSurface = SDL_LoadBMP( path.c_str() );
+    SDL_SetColorKey( loadedSurface, SDL_TRUE, SDL_MapRGB( loadedSurface->format, 0xFF, 0, 0xFF ) );
     if( loadedSurface == NULL)
     {
         std::cout << "unable to load image" << path.c_str(), SDL_GetError();

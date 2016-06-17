@@ -58,12 +58,14 @@ bool Game::Loop()
     SDL_RenderCopyEx(renderer, player.objImage, NULL, &player.rect, player.angle, NULL, SDL_FLIP_NONE);
     SDL_RenderCopy(renderer, player.hotbar.objImage, NULL, &player.hotbar.rect);
     SDL_RenderCopy(renderer, player.hotbar.selectedimage, NULL, &player.hotbar.selectedimagerect);
-    for(int i = 0; i < 4; i++)
+    for(int i = 0; i < 5; i++)
     {
-        if(player.hotbar.slot[i].identifier != -1)
+        if(player.hotbar.slot[i].identifier == -1)
+            i = i;
+        else
             SDL_RenderCopy(renderer, player.hotbar.slot[i].objImage, NULL, &player.hotbar.slot[i].rect);
     }
-    for(int i = 0; i < 100 ; i++)
+    for(int i = 0; i < 101 ; i++)
     {
         if(environment.groundItems[i].identifier != -1)
             SDL_RenderCopy(renderer,environment.groundItems[i].objImage,NULL, &environment.groundItems[i].rect);
@@ -133,7 +135,10 @@ bool Game::Loop()
         //Update Gameobjects
         player.updateCharacter();
         environment.updateItems();
-        environment.checkCollision(player);
+
+        //Check for Collision
+        environment.checkCollision(&player);
+        environment.updateItems();
 
         //Update Framerate
         if( time < SCREEN_TICKS_PER_FRAME )
@@ -159,12 +164,12 @@ bool Game::CreateObjects()
     testitem.objImage = testitem.loadSurface("testitem.bmp", screensurface, renderer);
     testitem.identifier = 101;
     testitem.type = WEAPON;
-    testitem.status = GROUND;
+    testitem.status = HOTBAR;
     testitem.x = 500;
     testitem.y = 500;
 
     testitem2.objImage = testitem2.loadSurface("testitem.bmp", screensurface, renderer);
-    testitem2.identifier = 101;
+    testitem2.identifier = 102;
     testitem2.type = WEAPON;
     testitem2.status = GROUND;
     testitem2.x = 500;
@@ -172,7 +177,7 @@ bool Game::CreateObjects()
 
     environment.insertitem(testitem, 500, 500);
 
-    player.hotbar.insertitem(testitem2, 1);
+    player.hotbar.insertitem(testitem2, 0);
 
     player.objImage = player.loadSurface("test.bmp", screensurface, renderer);
     player.hotbar.objImage = player.hotbar.loadSurface("hotbar.bmp", screensurface, renderer);

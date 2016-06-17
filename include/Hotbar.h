@@ -19,6 +19,8 @@ class Hotbar : public Gameobject
 
         void updateHotbar();
 
+        Item getactiveItem();
+
         int itemSelected;
 
         SDL_Texture* selectedimage;
