@@ -384,12 +384,13 @@
 	<SDL2/SDL.h>
 	<iostream>
 
-1466185060 c:\users\william\documents\zsb\include\character.h
+1466193318 c:\users\william\documents\zsb\include\character.h
 	"Gameobject.h"
 	"Hotbar.h"
 	"Item.h"
+	"Projectile.h"
 
-1466184862 c:\users\william\documents\zsb\include\hotbar.h
+1466192295 c:\users\william\documents\zsb\include\hotbar.h
 	"Item.h"
 	"Gameobject.h"
 
@@ -397,22 +398,22 @@
 	<iostream>
 	"Gameobject.h"
 
-1466104678 source:c:\users\william\documents\zsb\src\character.cpp
+1466195025 source:c:\users\william\documents\zsb\src\character.cpp
 	"Character.h"
 	"Hotbar.h"
 	<SDL2/SDL.h>
 	<cmath>
 
-1466184413 source:c:\users\william\documents\zsb\src\game.cpp
+1466195387 source:c:\users\william\documents\zsb\src\game.cpp
 	<Game.h>
 	<SDL2/SDL.h>
 	<iostream>
 	<cmath>
 
-1466184307 source:c:\users\william\documents\zsb\src\gameobject.cpp
+1466195398 source:c:\users\william\documents\zsb\src\gameobject.cpp
 	"Gameobject.h"
 
-1466184883 source:c:\users\william\documents\zsb\src\hotbar.cpp
+1466195025 source:c:\users\william\documents\zsb\src\hotbar.cpp
 	"Hotbar.h"
 	"Item.h"
 
@@ -482,4 +483,10 @@
 	"Item.h"
 	"math.h"
 	"Character.h"
+
+1466195098 c:\users\william\documents\zsb\include\projectile.h
+	"Gameobject.h"
+
+1466193806 source:c:\users\william\documents\zsb\src\projectile.cpp
+	"Projectile.h"
 

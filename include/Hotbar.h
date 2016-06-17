@@ -10,7 +10,7 @@ class Hotbar : public Gameobject
         virtual ~Hotbar();
 
         //C++ is base 0 arrrggg
-        Item slot[4];
+        Item slot[5];
 
         bool insertitem(Item item, int slotnum);
         bool insertitem(Item item);

@@ -58,17 +58,22 @@ bool Game::Loop()
     SDL_RenderCopyEx(renderer, player.objImage, NULL, &player.rect, player.angle, NULL, SDL_FLIP_NONE);
     SDL_RenderCopy(renderer, player.hotbar.objImage, NULL, &player.hotbar.rect);
     SDL_RenderCopy(renderer, player.hotbar.selectedimage, NULL, &player.hotbar.selectedimagerect);
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i <= 4; i++)
     {
         if(player.hotbar.slot[i].identifier == -1)
             i = i;
         else
             SDL_RenderCopy(renderer, player.hotbar.slot[i].objImage, NULL, &player.hotbar.slot[i].rect);
     }
-    for(int i = 0; i < 101 ; i++)
+    for(int i = 0; i < 100 ; i++)
     {
         if(environment.groundItems[i].identifier != -1)
             SDL_RenderCopy(renderer,environment.groundItems[i].objImage,NULL, &environment.groundItems[i].rect);
+    }
+    for(int i = 0; i < 100 ; i++)
+    {
+        if(player.project[i].isVisible)
+            SDL_RenderCopy(renderer,player.project[i].objImage,NULL, &player.project[i].rect);
     }
     SDL_RenderPresent(renderer);
 
@@ -129,6 +134,14 @@ bool Game::Loop()
                         player.hotbar.itemSelected++;
                     break;
                 }
+                case SDL_MOUSEBUTTONDOWN:
+                {
+                    if(event.button.button)
+                    {
+                        player.useItem();
+                        break;
+                    }
+                }
             } // end switch
         } // end of message processing
 
@@ -179,9 +192,15 @@ bool Game::CreateObjects()
 
     player.hotbar.insertitem(testitem2, 0);
 
+    for(int i = 0; i < 100; i++)
+    {
+        player.project[i].objImage = player.project[i].loadSurface("bullet.bmp",screensurface,renderer);
+    }
+
     player.objImage = player.loadSurface("test.bmp", screensurface, renderer);
     player.hotbar.objImage = player.hotbar.loadSurface("hotbar.bmp", screensurface, renderer);
     player.hotbar.selectedimage = player.hotbar.loadSurface("hotbarselected.bmp", screensurface, renderer);
+
     return true;
 }
 

@@ -3,6 +3,7 @@
 #include "Gameobject.h"
 #include "Hotbar.h"
 #include "Item.h"
+#include "Projectile.h"
 
 class Character : public Gameobject
 {
@@ -14,11 +15,11 @@ class Character : public Gameobject
 
         Hotbar hotbar;
         Item activeitem;
+        Projectile project[100];
 
         float angle;
 
         void updateCharacter();
-
         void useItem();
 
     private:

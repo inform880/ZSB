@@ -26,7 +26,7 @@ void Hotbar::updateHotbar()
     selectedimagerect.x = (itemSelected * 50);
 
 
-    for(int i = 0; i < 5; i ++)
+    for(int i = 0; i <= 4; i ++)
     {
         //std::cout << i << ": " << slot[i].identifier << std::endl;
         slot[i].updateItem(i);
@@ -59,7 +59,7 @@ bool Hotbar::insertitem(Item item, int slotnum)
 bool Hotbar::insertitem(Item item)
 {
 
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i <= 4; i++)
     {
         if(slot[i].identifier == -1)
         {

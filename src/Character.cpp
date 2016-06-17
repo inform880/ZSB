@@ -26,6 +26,14 @@ void Character::updateCharacter()
     y = rect.y + 100;
 
     activeitem = hotbar.getactiveItem();
+
+    for(int i = 0; i < 100; i++)
+    {
+        if(project[i].isVisible)
+        {
+            project[i].update();
+        }
+    }
 }
 
 void Character::useItem()
@@ -36,6 +44,20 @@ void Character::useItem()
             switch(activeitem.identifier)
             {
                 case 101:
+                    for(int i = 0; i < 100; i++)
+                    {
+                        if(project[i].isVisible == false)
+                        {
+                            int x, y;
+                            SDL_GetMouseState( &x, &y );
+                            float xDiff = rect.x - x;
+                            float yDiff = rect.y - y;
+                            project[i].isVisible = true;
+                            project[i].velX = cos(xDiff);
+                            project[i].velY = sin(yDiff);
+                            break;
+                        }
+                    }
                     break;
             }
             break;
