@@ -12,18 +12,18 @@ Character::Character()
 
 void Character::updateCharacter()
 {
-    rect.x-=velX;
-    rect.y-=velY;
+    rect.x = x - 25;
+    rect.y = y - 25;
 
-    int x, y;
-    SDL_GetMouseState( &x, &y );
-    float xDiff = rect.x - x;
-    float yDiff = rect.y - y;
+    x-=velX;
+    y-=velY;
+
+    int mx, my;
+    SDL_GetMouseState( &mx, &my );
+    float xDiff = x - mx;
+    float yDiff = y - my;
     angle = atan2(yDiff,xDiff) * (180 / M_PI);
     hotbar.updateHotbar();
-
-    x = rect.x + 100;
-    y = rect.y + 100;
 
     activeitem = hotbar.getactiveItem();
 
@@ -48,13 +48,15 @@ void Character::useItem()
                     {
                         if(project[i].isVisible == false)
                         {
-                            int x, y;
-                            SDL_GetMouseState( &x, &y );
-                            float xDiff = rect.x - x;
-                            float yDiff = rect.y - y;
+                            int mx, my;
+                            SDL_GetMouseState( &mx, &my );
+                            float xDiff = (x) - mx;
+                            float yDiff = (y) - my;
+                            project[i].x = x;
+                            project[i].y = y;
                             project[i].isVisible = true;
-                            project[i].velX = cos(xDiff);
-                            project[i].velY = sin(yDiff);
+                            project[i].velX = cos(angle*M_PI/180);
+                            project[i].velY = sin(angle*M_PI/180);
                             break;
                         }
                     }

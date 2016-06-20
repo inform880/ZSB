@@ -24,7 +24,11 @@ bool Projectile::createProjectile(int x, int y)
 
 void Projectile::update()
 {
-    rect.x =+ velX;
-    rect.y =+ velY;
+    x -= velX;
+    y -= velY;
+    rect.x = x;
+    rect.y = y;
+    //std::cout << x << std::endl;
+    //std::cout << y << std::endl;
     return;
 }

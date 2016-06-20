@@ -380,7 +380,7 @@
 	<SDL2/SDL.h>
 	<SDL2/SDL_timer.h>
 
-1466101332 c:\users\william\documents\zsb\include\gameobject.h
+1466439344 c:\users\william\documents\zsb\include\gameobject.h
 	<SDL2/SDL.h>
 	<iostream>
 
@@ -398,13 +398,13 @@
 	<iostream>
 	"Gameobject.h"
 
-1466195025 source:c:\users\william\documents\zsb\src\character.cpp
+1466439311 source:c:\users\william\documents\zsb\src\character.cpp
 	"Character.h"
 	"Hotbar.h"
 	<SDL2/SDL.h>
 	<cmath>
 
-1466195387 source:c:\users\william\documents\zsb\src\game.cpp
+1466195476 source:c:\users\william\documents\zsb\src\game.cpp
 	<Game.h>
 	<SDL2/SDL.h>
 	<iostream>
@@ -487,6 +487,6 @@
 1466195098 c:\users\william\documents\zsb\include\projectile.h
 	"Gameobject.h"
 
-1466193806 source:c:\users\william\documents\zsb\src\projectile.cpp
+1466439379 source:c:\users\william\documents\zsb\src\projectile.cpp
 	"Projectile.h"
 
