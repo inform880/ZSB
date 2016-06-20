@@ -15,10 +15,10 @@ void Character::updateCharacter()
     rect.x-=velX;
     rect.y-=velY;
 
-    int mx, my;
-    SDL_GetMouseState( &mx, &my );
-    float xDiff = rect.x - mx;
-    float yDiff = rect.y - my;
+    int x, y;
+    SDL_GetMouseState( &x, &y );
+    float xDiff = rect.x - x;
+    float yDiff = rect.y - y;
     angle = atan2(yDiff,xDiff) * (180 / M_PI);
     hotbar.updateHotbar();
 
@@ -50,14 +50,11 @@ void Character::useItem()
                         {
                             int x, y;
                             SDL_GetMouseState( &x, &y );
-                            float xDiff = x - x;
-                            float yDiff = y - y;
-                            //This should really go into projectile::createprojectile
+                            float xDiff = rect.x - x;
+                            float yDiff = rect.y - y;
                             project[i].isVisible = true;
-                            project[i].rect.x = rect.x;
-                            project[i].rect.y = rect.y;
-                            project[i].velX = cos(angle);
-                            project[i].velY = sin(angle);
+                            project[i].velX = cos(xDiff);
+                            project[i].velY = sin(yDiff);
                             break;
                         }
                     }

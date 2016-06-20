@@ -17,8 +17,8 @@ class Gameobject
 
         bool isVisible;
 
-        float x;
-        float y;
+        int x;
+        int y;
 
     protected:
 
