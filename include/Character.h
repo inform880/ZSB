@@ -4,6 +4,7 @@
 #include "Hotbar.h"
 #include "Item.h"
 #include "Projectile.h"
+#include "WeaponData.h"
 
 class Character : public Gameobject
 {

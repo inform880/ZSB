@@ -53,6 +53,7 @@
 		<Unit filename="include/Hotbar.h" />
 		<Unit filename="include/Item.h" />
 		<Unit filename="include/Projectile.h" />
+		<Unit filename="include/WeaponData.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Character.cpp" />
 		<Unit filename="src/Environment.cpp" />
@@ -61,6 +62,7 @@
 		<Unit filename="src/Hotbar.cpp" />
 		<Unit filename="src/Item.cpp" />
 		<Unit filename="src/Projectile.cpp" />
+		<Unit filename="src/WeaponData.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

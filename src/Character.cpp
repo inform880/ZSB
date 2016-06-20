@@ -3,6 +3,7 @@
 #include <SDL2/SDL.h>
 #include <cmath>
 
+
 Character::Character()
 {
     velX = 0;
@@ -41,28 +42,23 @@ void Character::useItem()
     switch(activeitem.type)
     {
         case WEAPON:                    //WEAPONS are in the 100s
-            switch(activeitem.identifier)
             {
-                case 101:
-                    for(int i = 0; i < 100; i++)
+                WeaponData weapon(activeitem.identifier);
+                for(int i = 0; i < 100; i++)
+                {
+                    if(project[i].isVisible == false)
                     {
-                        if(project[i].isVisible == false)
-                        {
-                            int mx, my;
-                            SDL_GetMouseState( &mx, &my );
-                            float xDiff = (x) - mx;
-                            float yDiff = (y) - my;
-                            project[i].x = x;
-                            project[i].y = y;
-                            project[i].isVisible = true;
-                            project[i].velX = cos(angle*M_PI/180);
-                            project[i].velY = sin(angle*M_PI/180);
-                            break;
-                        }
+                        //Shoot Bullet
+                        project[i].x = x;
+                        project[i].y = y;
+                        project[i].isVisible = true;
+                        project[i].velX = cos(angle*M_PI/180)*weapon.bulletspeed;
+                        project[i].velY = sin(angle*M_PI/180)*weapon.bulletspeed;
+                        break;
                     }
-                    break;
+                }
+                break;
             }
-            break;
         case FOOD:                      //FOODs are 200s
             break;
         case TOOL:                      //TOOLs are 300s

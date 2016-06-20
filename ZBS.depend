@@ -372,7 +372,7 @@
 	<SDL2/SDL.h>
 	"Game.h"
 
-1466111671 c:\users\william\documents\zsb\include\game.h
+1466443216 c:\users\william\documents\zsb\include\game.h
 	"Game.h"
 	"Gameobject.h"
 	"Character.h"
@@ -384,11 +384,12 @@
 	<SDL2/SDL.h>
 	<iostream>
 
-1466193318 c:\users\william\documents\zsb\include\character.h
+1466440126 c:\users\william\documents\zsb\include\character.h
 	"Gameobject.h"
 	"Hotbar.h"
 	"Item.h"
 	"Projectile.h"
+	"WeaponData.h"
 
 1466192295 c:\users\william\documents\zsb\include\hotbar.h
 	"Item.h"
@@ -398,13 +399,13 @@
 	<iostream>
 	"Gameobject.h"
 
-1466439311 source:c:\users\william\documents\zsb\src\character.cpp
+1466441974 source:c:\users\william\documents\zsb\src\character.cpp
 	"Character.h"
 	"Hotbar.h"
 	<SDL2/SDL.h>
 	<cmath>
 
-1466195476 source:c:\users\william\documents\zsb\src\game.cpp
+1466445597 source:c:\users\william\documents\zsb\src\game.cpp
 	<Game.h>
 	<SDL2/SDL.h>
 	<iostream>
@@ -489,4 +490,9 @@
 
 1466439379 source:c:\users\william\documents\zsb\src\projectile.cpp
 	"Projectile.h"
+
+1466441974 c:\users\william\documents\zsb\include\weapondata.h
+
+1466441974 source:c:\users\william\documents\zsb\src\weapondata.cpp
+	"WeaponData.h"
 
