@@ -323,48 +323,53 @@
 	"begin_code.h"
 	"close_code.h"
 
-1466018852 d:\zsb\include\game.h
+1466196060 d:\zsb\include\game.h
 	"Game.h"
 	"Gameobject.h"
 	"Character.h"
+	"Environment.h"
 	<SDL2/SDL.h>
 	<SDL2/SDL_timer.h>
 
-1466032048 source:d:\zsb\src\game.cpp
+1466610746 source:d:\zsb\src\game.cpp
 	<Game.h>
 	<SDL2/SDL.h>
 	<iostream>
 	<cmath>
 
-1466017720 source:d:\zsb\src\gameobject.cpp
+1466196062 source:d:\zsb\src\gameobject.cpp
 	"Gameobject.h"
 
-1466032570 d:\zsb\include\gameobject.h
+1466440590 d:\zsb\include\gameobject.h
 	<SDL2/SDL.h>
 	<iostream>
 
-1466032760 d:\zsb\include\character.h
+1466610746 d:\zsb\include\character.h
 	"Gameobject.h"
 	"Hotbar.h"
+	"Item.h"
+	"Projectile.h"
+	"WeaponData.h"
 
-1466032970 source:d:\zsb\src\character.cpp
+1466610746 source:d:\zsb\src\character.cpp
 	"Character.h"
 	"Hotbar.h"
+	<SDL2/SDL.h>
 	<cmath>
 
-1466032552 source:d:\zsb\src\hotbar.cpp
+1466196062 source:d:\zsb\src\hotbar.cpp
 	"Hotbar.h"
 	"Item.h"
 
-1466033520 d:\zsb\include\hotbar.h
+1466196060 d:\zsb\include\hotbar.h
 	"Item.h"
 	"Gameobject.h"
 
-1466031610 d:\zsb\include\item.h
+1466196060 d:\zsb\include\item.h
 	<iostream>
 	"Gameobject.h"
 
-1466032350 source:d:\zsb\src\item.cpp
+1466196062 source:d:\zsb\src\item.cpp
 	"Item.h"
 
 1466097023 source:c:\users\william\documents\zsb\main.cpp
@@ -504,4 +509,32 @@
 
 1466533369 source:c:\users\william\documents\zsb\src\maploader.cpp
 	"Maploader.h"
+
+1466196060 d:\zsb\include\projectile.h
+	"Gameobject.h"
+
+1466610746 d:\zsb\include\weapondata.h
+
+1466610746 d:\zsb\include\environment.h
+	"Item.h"
+	"math.h"
+	"Character.h"
+	"Maploader.h"
+
+1466610746 d:\zsb\include\maploader.h
+	<iostream>
+	<fstream>
+	"Item.h"
+
+1466610746 source:d:\zsb\src\environment.cpp
+	"Environment.h"
+
+1466610746 source:d:\zsb\src\maploader.cpp
+	"Maploader.h"
+
+1466440592 source:d:\zsb\src\projectile.cpp
+	"Projectile.h"
+
+1466610748 source:d:\zsb\src\weapondata.cpp
+	"WeaponData.h"
 
