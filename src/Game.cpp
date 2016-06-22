@@ -174,22 +174,6 @@ bool Game::Exit()
 
 bool Game::CreateObjects()
 {
-    file = SDL_RWFromFile( "savegame.txt", "r+w" );
-    std::string num[100];
-    num[0] = "testitem.bmp";
-    num[1] = 101;
-    num[2] = WEAPON;
-    num[3] = HOTBAR;
-    num[4] = 500;
-    num[5] = 500;
-    for( int i = 0; i < 100; ++i )
-    {
-        SDL_RWwrite( file, &num[ i ], num[i].size(), 1 );
-    }
-    std::cout << num[1].c_cstr() << std::endl;
-    //std::string str(num);
-    //std::cout << str.c_str() << std::endl;
-
 
     testitem.objImage = testitem.loadSurface("testitem.bmp", screensurface, renderer);
     testitem.identifier = 101;
@@ -204,6 +188,8 @@ bool Game::CreateObjects()
     testitem2.status = GROUND;
     testitem2.x = 500;
     testitem2.y = 500;
+
+    environment.loadEnvironment();
 
     environment.insertitem(testitem, 500, 500);
 

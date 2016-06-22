@@ -3,6 +3,7 @@
 #include "Item.h"
 #include "math.h"
 #include "Character.h"
+#include "Maploader.h"
 
 class Environment
 {
@@ -19,6 +20,10 @@ class Environment
         void updateItems();
 
         void checkCollision(Character *character);
+
+        bool loadEnvironment();
+
+        Maploader maploader;
 
     protected:
 

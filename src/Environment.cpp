@@ -64,3 +64,9 @@ void Environment::checkCollision(Character *character)
         }
     }
 }
+
+bool Environment::loadEnvironment()
+{
+    maploader.loadMap("savegame");
+    return true;
+}

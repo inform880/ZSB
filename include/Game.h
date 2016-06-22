@@ -27,7 +27,6 @@ class Game
         SDL_Window* window;
         SDL_Renderer* renderer;
         SDL_Surface* screensurface;
-        SDL_RWops* file;
 
         Character player;
         Item testitem;
