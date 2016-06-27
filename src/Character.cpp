@@ -9,6 +9,7 @@ Character::Character()
     velX = 0;
     velY = 0;
     angle = 45;
+    itemDelay = 10000;
 }
 
 void Character::updateCharacter()
@@ -18,6 +19,8 @@ void Character::updateCharacter()
 
     x-=velX;
     y-=velY;
+
+    itemDelay++;
 
     int mx, my;
     SDL_GetMouseState( &mx, &my );
@@ -46,7 +49,7 @@ void Character::useItem()
                 WeaponData weapon(activeitem.identifier);
                 for(int i = 0; i < 100; i++)
                 {
-                    if(project[i].isVisible == false)
+                    if(project[i].isVisible == false && itemDelay > weapon.shootingspeed)
                     {
                         //Shoot Bullet
                         project[i].x = x;
@@ -54,6 +57,7 @@ void Character::useItem()
                         project[i].isVisible = true;
                         project[i].velX = cos(angle*M_PI/180)*weapon.bulletspeed;
                         project[i].velY = sin(angle*M_PI/180)*weapon.bulletspeed;
+                        itemDelay = 0;
                         break;
                     }
                 }

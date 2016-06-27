@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+ZBS.depend
+ZBS.layout
+bin/Debug/ZBS.exe
+*.o

@@ -25,7 +25,7 @@ bool Maploader::loadMap(std::string levelName)
         saveGame << "test \n";
     }
     saveGame.close();
-    for(int i = 0; i < 6; i++)
+    for(int i = 0; i < 100; i++)
         std::cout << num[i] << std::endl;
     return true;
 }

@@ -49,6 +49,10 @@ Game::~Game()
 bool Game::Loop()
 {
     bool done = false;
+
+    bool rightMouseButton = false;
+    bool leftMouseButton = false;
+
     while (!done)
     {
     Uint32 starttime = SDL_GetTicks();
@@ -79,6 +83,7 @@ bool Game::Loop()
 
         // message processing loop
         SDL_Event event;
+
         while (SDL_PollEvent(&event))
         {
             // check for messages
@@ -136,14 +141,24 @@ bool Game::Loop()
                 }
                 case SDL_MOUSEBUTTONDOWN:
                 {
-                    if(event.button.button)
+                    if(event.button.button == SDL_BUTTON_LEFT)
                     {
-                        player.useItem();
+                        leftMouseButton = true;
+                        break;
+                    }
+                }
+                case SDL_MOUSEBUTTONUP:
+                {
+                    if(event.button.button == SDL_BUTTON_LEFT)
+                    {
+                        leftMouseButton = false;
                         break;
                     }
                 }
             } // end switch
         } // end of message processing
+        if(leftMouseButton)
+            player.useItem();
 
         //Update Gameobjects
         player.updateCharacter();

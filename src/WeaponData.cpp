@@ -6,11 +6,13 @@ WeaponData::WeaponData(int identifier)
     {
     case 101:
         clipSize = 5;
-        bulletspeed = 5;
+        bulletspeed = 15;
+        shootingspeed = 10;
         break;
     case 102:
         clipSize = 5;
-        bulletspeed = 1;
+        bulletspeed = 10;
+        shootingspeed = 100;
         break;
     }
 }

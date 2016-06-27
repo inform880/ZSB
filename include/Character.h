@@ -13,6 +13,7 @@ class Character : public Gameobject
 
         int velX;
         int velY;
+        int itemDelay;
 
         Hotbar hotbar;
         Item activeitem;
