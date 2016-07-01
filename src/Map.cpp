@@ -1,16 +1,16 @@
-#include "Maploader.h"
+#include "Map.h"
 
-Maploader::Maploader()
+Map::Map()
 {
     //ctor
 }
 
-Maploader::~Maploader()
+Map::~Map()
 {
     //dtor
 }
 
-bool Maploader::loadMap(std::string levelName)
+bool Map::loadMap(std::string levelName)
 {
     saveGame.open("savegame.txt");
     std::string num[100];
@@ -30,7 +30,7 @@ bool Maploader::loadMap(std::string levelName)
     return true;
 }
 
-void Maploader::saveMap()
+void Map::saveMap()
 {
     //for()
 }

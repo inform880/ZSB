@@ -47,10 +47,11 @@ void Environment::checkCollision(Character *character)
     {
         if(groundItems[i].identifier != -1)
         {
-            int diffX = pow(character->rect.x - groundItems[i].rect.x, 2);
-            int diffY = pow(character->rect.y - groundItems[i].rect.y, 2);
+            int diffX = pow((character->x-25) - groundItems[i].rect.x-25, 2);
+            int diffY = pow((character->y-25) - groundItems[i].rect.y-25, 2);
             int distance = sqrt(diffX + diffY);
-            if (distance < 100)
+            std::cout <<"distance: "<< distance << std::endl;
+            if (distance < 25)
             {
                 character->hotbar.insertitem(groundItems[i]);
 
@@ -67,6 +68,6 @@ void Environment::checkCollision(Character *character)
 
 bool Environment::loadEnvironment()
 {
-    maploader.loadMap("savegame");
+    map.loadMap("savegame");
     return true;
 }

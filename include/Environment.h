@@ -3,7 +3,7 @@
 #include "Item.h"
 #include "math.h"
 #include "Character.h"
-#include "Maploader.h"
+#include "Map.h"
 
 class Environment
 {
@@ -23,7 +23,7 @@ class Environment
 
         bool loadEnvironment();
 
-        Maploader maploader;
+        Map map;
 
     protected:
 

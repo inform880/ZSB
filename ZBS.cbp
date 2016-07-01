@@ -52,8 +52,9 @@
 		<Unit filename="include/Gameobject.h" />
 		<Unit filename="include/Hotbar.h" />
 		<Unit filename="include/Item.h" />
-		<Unit filename="include/Maploader.h" />
+		<Unit filename="include/Map.h" />
 		<Unit filename="include/Projectile.h" />
+		<Unit filename="include/Tile.h" />
 		<Unit filename="include/WeaponData.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Character.cpp" />
@@ -62,8 +63,9 @@
 		<Unit filename="src/Gameobject.cpp" />
 		<Unit filename="src/Hotbar.cpp" />
 		<Unit filename="src/Item.cpp" />
-		<Unit filename="src/Maploader.cpp" />
+		<Unit filename="src/Map.cpp" />
 		<Unit filename="src/Projectile.cpp" />
+		<Unit filename="src/Tile.cpp" />
 		<Unit filename="src/WeaponData.cpp" />
 		<Extensions>
 			<code_completion />

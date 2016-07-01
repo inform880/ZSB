@@ -6,16 +6,20 @@
 
 Character::Character()
 {
+    x = 0;
+    y = 0;
     velX = 0;
     velY = 0;
     angle = 45;
     itemDelay = 10000;
+    rect.x = x + 25;
+    rect.y = y + 25;
 }
 
 void Character::updateCharacter()
 {
-    rect.x = x - 25;
-    rect.y = y - 25;
+    //rect.x = x - 25;
+    //rect.y = y - 25;
 
     x-=velX;
     y-=velY;
@@ -24,8 +28,8 @@ void Character::updateCharacter()
 
     int mx, my;
     SDL_GetMouseState( &mx, &my );
-    float xDiff = x - mx;
-    float yDiff = y - my;
+    float xDiff = rect.x+25 - mx;
+    float yDiff = rect.y+25 - my;
     angle = atan2(yDiff,xDiff) * (180 / M_PI);
     hotbar.updateHotbar();
 
@@ -52,8 +56,8 @@ void Character::useItem()
                     if(project[i].isVisible == false && itemDelay > weapon.shootingspeed)
                     {
                         //Shoot Bullet
-                        project[i].x = x;
-                        project[i].y = y;
+                        project[i].x = rect.x+25;
+                        project[i].y = rect.y+25;
                         project[i].isVisible = true;
                         project[i].velX = cos(angle*M_PI/180)*weapon.bulletspeed;
                         project[i].velY = sin(angle*M_PI/180)*weapon.bulletspeed;

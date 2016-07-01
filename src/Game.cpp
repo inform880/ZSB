@@ -68,11 +68,16 @@ bool Game::Loop()
             i = i;
         else
             SDL_RenderCopy(renderer, player.hotbar.slot[i].objImage, NULL, &player.hotbar.slot[i].rect);
+
     }
     for(int i = 0; i < 100 ; i++)
     {
         if(environment.groundItems[i].identifier != -1)
+        {
+            environment.groundItems[i].rect.x += environment.map.scroll_X;
+            environment.groundItems[i].rect.y += environment.map.scroll_Y;
             SDL_RenderCopy(renderer,environment.groundItems[i].objImage,NULL, &environment.groundItems[i].rect);
+        }
     }
     for(int i = 0; i < 100 ; i++)
     {
@@ -160,6 +165,29 @@ bool Game::Loop()
         if(leftMouseButton)
             player.useItem();
 
+        //Update player position
+        environment.map.scroll_X = 400 - 25 - player.x;
+        environment.map.scroll_Y = 300 - 25 - player.y;
+
+        //player.rect.x = 400;
+        //player.rect.y = 300;
+
+        /*if( player.x < 400 - 25 )
+        {
+            environment.map.scroll_X = 0;
+        }
+        if( player.y < 300 - 25 )
+        {
+            environment.map.scroll_Y = 0;
+        }
+*/
+        player.rect.x = (player.x - 25) + environment.map.scroll_X;
+        player.rect.y = (player.y - 25) + environment.map.scroll_Y;
+
+
+        std::cout << "X: " << environment.map.scroll_X << std::endl;
+        std::cout << "Y: " << environment.map.scroll_Y << std::endl;
+
         //Update Gameobjects
         player.updateCharacter();
         environment.updateItems();
@@ -194,15 +222,15 @@ bool Game::CreateObjects()
     testitem.identifier = 101;
     testitem.type = WEAPON;
     testitem.status = HOTBAR;
-    testitem.x = 500;
-    testitem.y = 500;
+    testitem.x = 0;
+    testitem.y = 0;
 
     testitem2.objImage = testitem2.loadSurface("testitem.bmp", screensurface, renderer);
     testitem2.identifier = 102;
     testitem2.type = WEAPON;
     testitem2.status = GROUND;
-    testitem2.x = 500;
-    testitem2.y = 500;
+    testitem2.x = 600;
+    testitem2.y = 600;
 
     environment.loadEnvironment();
 

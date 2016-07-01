@@ -389,7 +389,7 @@
 	<SDL2/SDL.h>
 	<iostream>
 
-1467061796 c:\users\william\documents\zsb\include\character.h
+1467217714 c:\users\william\documents\zsb\include\character.h
 	"Gameobject.h"
 	"Hotbar.h"
 	"Item.h"
@@ -404,13 +404,13 @@
 	<iostream>
 	"Gameobject.h"
 
-1467066852 source:c:\users\william\documents\zsb\src\character.cpp
+1467402922 source:c:\users\william\documents\zsb\src\character.cpp
 	"Character.h"
 	"Hotbar.h"
 	<SDL2/SDL.h>
 	<cmath>
 
-1467066939 source:c:\users\william\documents\zsb\src\game.cpp
+1467402874 source:c:\users\william\documents\zsb\src\game.cpp
 	<Game.h>
 	<SDL2/SDL.h>
 	<iostream>
@@ -482,14 +482,14 @@
 	<sys/types.h>
 	<stdint.h>
 
-1466607305 source:c:\users\william\documents\zsb\src\environment.cpp
+1467402993 source:c:\users\william\documents\zsb\src\environment.cpp
 	"Environment.h"
 
-1466607305 c:\users\william\documents\zsb\include\environment.h
+1467397323 c:\users\william\documents\zsb\include\environment.h
 	"Item.h"
 	"math.h"
 	"Character.h"
-	"Maploader.h"
+	"Map.h"
 
 1466195098 c:\users\william\documents\zsb\include\projectile.h
 	"Gameobject.h"
@@ -499,7 +499,7 @@
 
 1466607305 c:\users\william\documents\zsb\include\weapondata.h
 
-1467067056 source:c:\users\william\documents\zsb\src\weapondata.cpp
+1467217714 source:c:\users\william\documents\zsb\src\weapondata.cpp
 	"WeaponData.h"
 
 1466607305 c:\users\william\documents\zsb\include\maploader.h
@@ -507,7 +507,7 @@
 	<fstream>
 	"Item.h"
 
-1466607516 source:c:\users\william\documents\zsb\src\maploader.cpp
+1467217714 source:c:\users\william\documents\zsb\src\maploader.cpp
 	"Maploader.h"
 
 1466196060 d:\zsb\include\projectile.h
@@ -537,4 +537,19 @@
 
 1466610748 source:d:\zsb\src\weapondata.cpp
 	"WeaponData.h"
+
+1467397606 c:\users\william\documents\zsb\include\map.h
+	<iostream>
+	<fstream>
+	"Item.h"
+	"Tile.h"
+
+1467396144 source:c:\users\william\documents\zsb\src\map.cpp
+	"Map.h"
+
+1467396354 c:\users\william\documents\zsb\include\tile.h
+	"Gameobject.h"
+
+1467396221 source:c:\users\william\documents\zsb\src\tile.cpp
+	"Tile.h"
 

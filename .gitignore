@@ -57,3 +57,8 @@ bin/Debug/ZBS.exe
 ZBS.layout
 *.layout
 >>>>>>> origin/master
+*.exe
+*.o
+ZBS.cscope_file_list
+*.cbp
+ZBS.layout
