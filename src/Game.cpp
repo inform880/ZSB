@@ -184,10 +184,6 @@ bool Game::Loop()
         player.rect.x = (player.x - 25) + environment.map.scroll_X;
         player.rect.y = (player.y - 25) + environment.map.scroll_Y;
 
-
-        std::cout << "X: " << environment.map.scroll_X << std::endl;
-        std::cout << "Y: " << environment.map.scroll_Y << std::endl;
-
         //Update Gameobjects
         player.updateCharacter();
         environment.updateItems();

@@ -62,3 +62,6 @@ ZBS.layout
 ZBS.cscope_file_list
 *.cbp
 ZBS.layout
+ZBS.depend
+obj/Debug/src/Environment.o
+*.o

@@ -47,11 +47,10 @@ void Environment::checkCollision(Character *character)
     {
         if(groundItems[i].identifier != -1)
         {
-            int diffX = pow((character->x-25) - groundItems[i].rect.x-25, 2);
-            int diffY = pow((character->y-25) - groundItems[i].rect.y-25, 2);
+            int diffX = pow((character->x) - groundItems[i].rect.x-22, 2);
+            int diffY = pow((character->y) - groundItems[i].rect.y-20, 2);
             int distance = sqrt(diffX + diffY);
-            std::cout <<"distance: "<< distance << std::endl;
-            if (distance < 25)
+            if (distance < 40)
             {
                 character->hotbar.insertitem(groundItems[i]);
 
